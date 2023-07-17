@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+
+:root {
+  --ff-h: "Poppins", sans-serif;
+  --ff-b: "Open Sans", sans-serif;
+  --pc-Violet: hsl(257, 40%, 49%);
+  --pc-Soft-Magenta: hsl(300, 69%, 71%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--pc-Violet);
+  background-image: url(./images/bg-desktop.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.wrapper {
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem 0;
+  margin: 0 2rem;
+}
+
+.header img {
+  width: 12rem;
+  padding-bottom: 1.25rem;
+}
+
+.main {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.hero-text h1 {
+  font-family: var(--ff-h);
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-family: var(--ff-b);
+  color: #fff;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+.btn {
+  padding: 0.75rem 3rem;
+  border: none;
+  border-radius: 2.5rem;
+  box-shadow: 0 8px 17px -8px rgba(0, 0, 0, 0.8);
+  font-family: var(--ff-h);
+  color: var(--pc-Violet);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: var(--pc-Soft-Magenta);
+  color: #fff;
+}
+
+.social {
+  text-align: right;
+}
+
+.social a i {
+  color: #fff;
+  font-size: 1.25rem;
+  position: relative;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.social a:not(:first-child) {
+  margin-left: 2rem;
+}
+
+.social a i::after {
+  content: "";
+  position: absolute;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: 2px solid white;
+  border-radius: 50%;
+  left: -13px;
+  bottom: -10px;
+  transition: all 0.3s ease;
+}
+
+.social a:nth-child(2) {
+  margin-left: 2.5rem;
+}
+
+.social a:hover i {
+  color: var(--pc-Soft-Magenta);
+}
+
+.social a i:hover::after {
+  border-color: var(--pc-Soft-Magenta);
+}
+
+@media (max-width: 1440px) {
+  .hero-img img {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .main {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-text h1 {
+    font-size: 26px;
+  }
+
+  .btn {
+    margin-bottom: 2rem;
+  }
+
+  .social {
+    text-align: center;
+  }
+}
